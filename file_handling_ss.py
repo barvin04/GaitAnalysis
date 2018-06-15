@@ -9,13 +9,13 @@ import os
 path = "/home/barvin04/Desktop/SmartStickData/"
 dirs = os.listdir(path)
 
-key1= 'F04_SE'  #taking only elderly, even then dataset is huge 
-key2 ='F05_SE'#'D06_SE'  '''make changes in these two keys for new files'''
+key1= 'D02_SE'  #taking only elderly, even then dataset is huge 
+#key2 ='F05_SE'#'D06_SE'  '''make changes in these two keys for new files'''
 #key3 ='F03_SE'
 
 array = []
 for elem in dirs:
-    if(elem[0:6]==key1 or elem[0:6]==key2): #or elem[0:6]==key3):
+    if(elem[0:6]==key1): #or elem[0:6]==key2): #or elem[0:6]==key3):
         print (elem)
         array.append(elem)
 
@@ -36,7 +36,7 @@ for elem in array: #elem are file names
     file = open(filename, 'r') #type 'r'
     filehandle = file.readlines()
 
-    out = open('/home/barvin04/Desktop/output.txt', 'a') #type 'a'
+    out = open('/home/barvin04/Desktop/output.txt', 'w') #type 'a'
     for lines in filehandle:
         out.write(lines)
 
