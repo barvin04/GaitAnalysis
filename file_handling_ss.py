@@ -1,3 +1,4 @@
+#first in line 
 '''
 through this all the data for GaitAnalysis can be obtained
 i have focues on adl: walk, jog, stairs; and fall: slip, trip

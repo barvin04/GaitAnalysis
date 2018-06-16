@@ -1,3 +1,4 @@
+#second in line too
 path = '/home/barvin04/Desktop/smaller_dataset/'
 
 acts = ['adl_elderly_jog.txt', 'adl_elderly_stairs.txt', 'adl_elderly_walk.txt', 'fall_elderly_slip.txt', 'fall_elderly_trip.txt']
