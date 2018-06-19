@@ -44,3 +44,29 @@ for aNumber in range(20):
 for aNumber in range(20):
     a, b, c, d, e, f= random.randint(110,125), random.randint(10,18),random.randint(110,125),random.randint(-990,990),random.randint(230,255),random.randint(230,255)
     print(clf_gini.predict([[a,b,c,d,e,f]]),'  ', a,b,c,d,e,f)
+
+#turn false to true to check for custom data, live input 
+while(False):
+    ta = str(input())
+    ta = ta.split(' ')
+    a,b,c,d,e,f= int(ta[0]), int(ta[1]), int(ta[2]), int(ta[3]), int(ta[4]), int(ta[5])
+    print(clf_gini.predict([[a,b,c,d,e,f]]), "  ", a,b,c,d,e,f)
+#checking whether idle or not on trip and slip dataset
+f = open('/home/barvin04/Desktop/GaitAnalysisData/fall_elderly_slip.txt','r')
+h = f.readlines()
+count=0
+for var in range(len(h)):
+	line = h[var]
+	line=line.strip(';\n')
+	line = line.split(',')
+	a = int(line[3])
+	b= int(line[4])
+	c=int(line[5])
+	d=int(line[6]) #not
+	e=int(line[7])
+	f=int(line[8])
+	if(clf_gini.predict([[a,b,c,d,e,f]])[0]=='IDLE'):
+		print(a,b,c,e,f)
+		count = count+1
+print(count*100/len(h))
+print('accuracy  :', 100-count*100/len(h))
