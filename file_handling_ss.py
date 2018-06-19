@@ -10,13 +10,13 @@ import os
 path = "/home/barvin04/Desktop/SmartStickData/"
 dirs = os.listdir(path)
 
-key1= 'D02_SE'  #taking only elderly, even then dataset is huge 
+key= ['D02_SE']  #taking only elderly, even then dataset is huge 
 #key2 ='F05_SE'#'D06_SE'  '''make changes in these two keys for new files'''
 #key3 ='F03_SE'
 
 array = []
 for elem in dirs:
-    if(elem[0:6]==key1): #or elem[0:6]==key2): #or elem[0:6]==key3):
+    if(elem[0:6] in key): #or elem[0:6]==key2): #or elem[0:6]==key3):
         print (elem)
         array.append(elem)
 
