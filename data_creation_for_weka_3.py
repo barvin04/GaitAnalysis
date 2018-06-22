@@ -12,9 +12,20 @@ fileg = filein1.readlines()
 for dataline in fileg:
     dataline = dataline.strip('\n')
     if(len(dataline.split(','))==5):
-        dataline = dataline + ',IDLE \n'
+        dataline = dataline + ',IDLE\n'
         fileout.write(dataline)
-
+###
+for var in range(206):  #results are good only if no. of training cases are equal for both the classes !!!!
+    Gx= random.randint(170,210)
+    Gy= random.randint(15,15)
+    Gz= random.randint(140,160)
+    #Ax=0
+    Ay=random.randint(255,255)
+    Az=random.randint(230,255)
+    
+    idle = str(Gx)+','+str(Gy)+','+str(Gz)+','+str(Ay)+','+str(Az)+','+ 'IDLE\n'
+    fileout.write(idle)
+###
 filein = open('/home/barvin04/Desktop/FALL.txt', 'r') #read
 fileh = filein.readlines()
 for dataline in fileh:
