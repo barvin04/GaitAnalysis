@@ -15,7 +15,7 @@ for dataline in fileg:
         dataline = dataline + ',IDLE\n'
         fileout.write(dataline)
 ###
-for var in range(206):  #results are good only if no. of training cases are equal for both the classes !!!!
+for var in range(206):  #results are good it seems if the no. of training cases are equal for both the classes !!!!
     Gx= random.randint(170,210)
     Gy= random.randint(15,15)
     Gz= random.randint(140,160)
